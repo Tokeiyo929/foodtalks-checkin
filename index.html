@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>食品品牌吃过打卡地图</title>
+    <link rel="stylesheet" href="./checkin.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">FoodTalks Brand Map</p>
+        <h1>食品品牌吃过打卡地图</h1>
+      </div>
+      <div class="top-actions">
+        <span class="sync-status" id="syncStatus">本地模式</span>
+        <button class="icon-button" id="randomBtn" type="button" title="随机一个未打卡品牌" aria-label="随机一个未打卡品牌">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>
+        </button>
+        <button class="icon-button" id="exportBtn" type="button" title="导出打卡记录" aria-label="导出打卡记录">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        </button>
+        <button class="text-button danger" id="resetBtn" type="button">重置</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="dashboard">
+        <div class="progress-panel">
+          <div class="progress-head">
+            <div>
+              <p class="label">打卡进度</p>
+              <strong id="progressText">0 / 0</strong>
+            </div>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressBar"></div>
+          </div>
+        </div>
+        <div class="metric">
+          <span id="visibleCount">0</span>
+          <p>当前筛选</p>
+        </div>
+        <div class="metric">
+          <span id="categoryCount">0</span>
+          <p>一级品类</p>
+        </div>
+        <div class="metric">
+          <span id="todayCount">0</span>
+          <p>今日打卡</p>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="filters" aria-label="筛选">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="searchInput" type="search" placeholder="搜索品牌、产品、品类" />
+          </label>
+
+          <div class="filter-block">
+            <div class="filter-title">一级品类</div>
+            <div class="chip-list" id="primaryFilters"></div>
+          </div>
+
+          <div class="filter-block">
+            <div class="filter-title">二级品类</div>
+            <div class="chip-list compact" id="secondaryFilters"></div>
+          </div>
+
+          <div class="filter-block">
+            <div class="filter-title">状态</div>
+            <div class="segmented" role="tablist" aria-label="打卡状态">
+              <button class="active" data-status="all" type="button">全部</button>
+              <button data-status="done" type="button">已吃过</button>
+              <button data-status="todo" type="button">未打卡</button>
+            </div>
+          </div>
+        </aside>
+
+        <section class="content">
+          <div class="content-toolbar">
+            <div>
+              <p class="label">品牌清单</p>
+              <h2 id="listTitle">全部品牌</h2>
+            </div>
+            <select id="sortSelect" aria-label="排序">
+              <option value="category">按品类排序</option>
+              <option value="checked">已打卡优先</option>
+              <option value="unchecked">未打卡优先</option>
+              <option value="company">按品牌名排序</option>
+            </select>
+          </div>
+          <div class="cards" id="brandCards"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></svg>
+            <p>没有匹配结果，换个关键词或品类试试。</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="brandDialog">
+      <form method="dialog" class="dialog-card">
+        <button class="icon-button close" value="cancel" aria-label="关闭">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <div id="dialogContent"></div>
+      </form>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase-config.js"></script>
+    <script src="./brand-checkin-data.js"></script>
+    <script src="./checkin.js"></script>
+  </body>
+</html>
