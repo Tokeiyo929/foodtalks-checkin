@@ -159,6 +159,19 @@ main {
   background: #fff4ef;
 }
 
+.auth-button {
+  min-width: 94px;
+  background: #172016;
+  border-color: #172016;
+  color: #fff;
+}
+
+.auth-button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
 .dashboard {
   display: grid;
   grid-template-columns: minmax(260px, 1fr) repeat(3, minmax(130px, 170px));

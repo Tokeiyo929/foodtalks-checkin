@@ -16,6 +16,7 @@ const state = {
   checked: loadChecked(),
   cloudReady: false,
   cloudError: "",
+  user: null,
 };
 
 const els = {
@@ -35,6 +36,8 @@ const els = {
   dialog: document.querySelector("#brandDialog"),
   dialogContent: document.querySelector("#dialogContent"),
   syncStatus: document.querySelector("#syncStatus"),
+  authBtn: document.querySelector("#authBtn"),
+  signOutBtn: document.querySelector("#signOutBtn"),
 };
 
 function loadChecked() {
@@ -61,19 +64,18 @@ function getDeviceId() {
 async function initCloudStorage() {
   if (!supabaseClient) {
     setSyncStatus("本地模式", "");
+    renderAuthControls();
     return;
   }
 
   setSyncStatus("连接云端...", "");
   try {
     const { data: sessionData } = await supabaseClient.auth.getSession();
-    let session = sessionData.session;
-    if (!session) {
-      const { data, error } = await supabaseClient.auth.signInAnonymously();
-      if (error) throw error;
-      session = data.session;
-    }
-    if (!session?.user?.id) throw new Error("匿名登录未返回用户 ID");
+    const session = sessionData.session;
+    state.user = session?.user || null;
+    renderAuthControls();
+
+    if (!session?.user?.id) throw new Error("未登录 GitHub");
 
     await loadCloudCheckins();
     state.cloudReady = true;
@@ -81,8 +83,51 @@ async function initCloudStorage() {
   } catch (error) {
     state.cloudError = error.message || String(error);
     state.cloudReady = false;
-    setSyncStatus("云端不可用，已转本地", "error");
+    if (!state.user) {
+      setSyncStatus("登录后云端同步", "");
+    } else {
+      setSyncStatus("云端不可用，已转本地", "error");
+    }
     console.warn("Supabase sync failed:", error);
+  }
+}
+
+async function signInWithGitHub() {
+  if (!supabaseClient) {
+    setSyncStatus("缺少 Supabase 配置", "error");
+    return;
+  }
+  const redirectTo = window.location.origin + window.location.pathname;
+  const { error } = await supabaseClient.auth.signInWithOAuth({
+    provider: "github",
+    options: { redirectTo },
+  });
+  if (error) {
+    state.cloudError = error.message || String(error);
+    setSyncStatus("GitHub 登录不可用", "error");
+    console.warn("GitHub login failed:", error);
+  }
+}
+
+async function signOut() {
+  if (!supabaseClient) return;
+  await supabaseClient.auth.signOut();
+  state.user = null;
+  state.cloudReady = false;
+  state.checked = {};
+  saveChecked();
+  setSyncStatus("登录后云端同步", "");
+  renderAuthControls();
+  render();
+}
+
+function renderAuthControls() {
+  const signedIn = Boolean(state.user);
+  els.authBtn.hidden = signedIn;
+  els.signOutBtn.hidden = !signedIn;
+  if (signedIn) {
+    const name = state.user.user_metadata?.user_name || state.user.user_metadata?.preferred_username || "GitHub";
+    els.syncStatus.textContent = state.cloudReady ? `云端同步：${name}` : `已登录：${name}`;
   }
 }
 
@@ -449,6 +494,17 @@ els.brandCards.addEventListener("click", (event) => {
 document.querySelector("#randomBtn").addEventListener("click", pickRandomUnchecked);
 document.querySelector("#exportBtn").addEventListener("click", exportCheckins);
 document.querySelector("#resetBtn").addEventListener("click", resetCheckins);
+els.authBtn.addEventListener("click", signInWithGitHub);
+els.signOutBtn.addEventListener("click", signOut);
+
+if (supabaseClient) {
+  supabaseClient.auth.onAuthStateChange((_event, session) => {
+    state.user = session?.user || null;
+    state.cloudReady = false;
+    renderAuthControls();
+    if (state.user) initCloudStorage();
+  });
+}
 
 getDeviceId();
 render();
