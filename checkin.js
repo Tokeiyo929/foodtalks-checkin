@@ -1,10 +1,15 @@
 const brands = window.FOODTALKS_BRANDS || [];
 const storageKey = "foodtalks-brand-checkins-v1";
 const deviceKey = "foodtalks-device-id-v1";
-const supabaseConfig = window.SUPABASE_CONFIG || {};
-const hasSupabaseConfig = Boolean(supabaseConfig.url && supabaseConfig.anonKey);
-const supabaseClient = hasSupabaseConfig && window.supabase
-  ? window.supabase.createClient(supabaseConfig.url, supabaseConfig.anonKey)
+const appwriteConfig = window.APPWRITE_CONFIG || {};
+const hasAppwriteConfig = Boolean(
+  appwriteConfig.endpoint &&
+  appwriteConfig.projectId &&
+  appwriteConfig.databaseId &&
+  appwriteConfig.tableId
+);
+const appwriteServices = hasAppwriteConfig && window.Appwrite
+  ? createAppwriteServices(appwriteConfig)
   : null;
 
 const state = {
@@ -62,7 +67,7 @@ function getDeviceId() {
 }
 
 async function initCloudStorage() {
-  if (!supabaseClient) {
+  if (!appwriteServices) {
     setSyncStatus("本地模式", "");
     renderAuthControls();
     return;
@@ -70,15 +75,16 @@ async function initCloudStorage() {
 
   setSyncStatus("连接云端...", "");
   try {
-    const { data: sessionData } = await supabaseClient.auth.getSession();
-    const session = sessionData.session;
-    state.user = session?.user || null;
+    state.user = await getCurrentAppwriteUser();
     renderAuthControls();
 
-    if (!session?.user?.id) throw new Error("未登录 GitHub");
+    if (!state.user?.$id) {
+      setSyncStatus("登录后云端同步", "");
+      return;
+    }
 
-    await loadCloudCheckins();
     state.cloudReady = true;
+    await loadCloudCheckins();
     setSyncStatus("云端同步", "cloud");
   } catch (error) {
     state.cloudError = error.message || String(error);
@@ -88,21 +94,23 @@ async function initCloudStorage() {
     } else {
       setSyncStatus("云端不可用，已转本地", "error");
     }
-    console.warn("Supabase sync failed:", error);
+    console.warn("Appwrite sync failed:", error);
   }
 }
 
 async function signInWithGitHub() {
-  if (!supabaseClient) {
-    setSyncStatus("缺少 Supabase 配置", "error");
+  if (!appwriteServices) {
+    setSyncStatus("缺少 Appwrite 配置", "error");
     return;
   }
   const redirectTo = window.location.origin + window.location.pathname;
-  const { error } = await supabaseClient.auth.signInWithOAuth({
-    provider: "github",
-    options: { redirectTo },
-  });
-  if (error) {
+  try {
+    await appwriteServices.account.createOAuth2Session({
+      provider: window.Appwrite.OAuthProvider.Github,
+      success: redirectTo,
+      failure: redirectTo,
+    });
+  } catch (error) {
     state.cloudError = error.message || String(error);
     setSyncStatus("GitHub 登录不可用", "error");
     console.warn("GitHub login failed:", error);
@@ -110,8 +118,12 @@ async function signInWithGitHub() {
 }
 
 async function signOut() {
-  if (!supabaseClient) return;
-  await supabaseClient.auth.signOut();
+  if (!appwriteServices) return;
+  try {
+    await appwriteServices.account.deleteSession({ sessionId: "current" });
+  } catch (error) {
+    console.warn("Appwrite sign out failed:", error);
+  }
   state.user = null;
   state.cloudReady = false;
   state.checked = {};
@@ -121,24 +133,73 @@ async function signOut() {
   render();
 }
 
+function createAppwriteServices(config) {
+  const client = new window.Appwrite.Client()
+    .setEndpoint(config.endpoint)
+    .setProject(config.projectId);
+
+  return {
+    account: new window.Appwrite.Account(client),
+    tables: new window.Appwrite.TablesDB(client),
+    databaseId: config.databaseId,
+    tableId: config.tableId,
+  };
+}
+
+async function getCurrentAppwriteUser() {
+  try {
+    return await appwriteServices.account.get();
+  } catch (error) {
+    if (window.Appwrite && error instanceof window.Appwrite.AppwriteException) {
+      return null;
+    }
+    throw error;
+  }
+}
+
+function appwriteUserPermissions(userId) {
+  const role = window.Appwrite.Role.user(userId);
+  return [
+    window.Appwrite.Permission.read(role),
+    window.Appwrite.Permission.update(role),
+    window.Appwrite.Permission.delete(role),
+  ];
+}
+
+function appwriteCheckinQueries(userId, extraQueries = []) {
+  return [
+    window.Appwrite.Query.equal("user_id", userId),
+    ...extraQueries,
+  ];
+}
+
+async function listCurrentUserCheckinRows(extraQueries = []) {
+  if (!state.user?.$id) throw new Error("缺少 Appwrite 用户 ID");
+
+  return appwriteServices.tables.listRows({
+    databaseId: appwriteServices.databaseId,
+    tableId: appwriteServices.tableId,
+    queries: appwriteCheckinQueries(state.user.$id, extraQueries),
+  });
+}
+
 function renderAuthControls() {
   const signedIn = Boolean(state.user);
   els.authBtn.hidden = signedIn;
   els.signOutBtn.hidden = !signedIn;
   if (signedIn) {
-    const name = state.user.user_metadata?.user_name || state.user.user_metadata?.preferred_username || "GitHub";
+    const name = state.user.name || state.user.email || "GitHub";
     els.syncStatus.textContent = state.cloudReady ? `云端同步：${name}` : `已登录：${name}`;
   }
 }
 
 async function loadCloudCheckins() {
-  const { data, error } = await supabaseClient
-    .from("checkins")
-    .select("brand_id, checked_at");
-  if (error) throw error;
+  const data = await listCurrentUserCheckinRows([
+    window.Appwrite.Query.limit(5000),
+  ]);
 
   const cloudChecked = {};
-  for (const row of data || []) {
+  for (const row of data.rows || []) {
     cloudChecked[row.brand_id] = row.checked_at;
   }
 
@@ -153,39 +214,69 @@ async function loadCloudCheckins() {
 }
 
 async function upsertCloudCheckin(id, checkedAt) {
-  if (!state.cloudReady || !supabaseClient) return;
-  const { data: userData, error: userError } = await supabaseClient.auth.getUser();
-  if (userError) throw userError;
-  const userId = userData.user?.id;
-  if (!userId) throw new Error("缺少 Supabase 用户 ID");
+  if (!state.cloudReady || !appwriteServices) return;
+  if (!state.user?.$id) throw new Error("缺少 Appwrite 用户 ID");
 
-  const { error } = await supabaseClient.from("checkins").upsert(
-    {
-      user_id: userId,
-      brand_id: id,
-      checked_at: checkedAt,
-    },
-    { onConflict: "user_id,brand_id" }
-  );
-  if (error) throw error;
+  const existing = await listCurrentUserCheckinRows([
+    window.Appwrite.Query.equal("brand_id", id),
+    window.Appwrite.Query.limit(1),
+  ]);
+
+  const data = {
+    user_id: state.user.$id,
+    brand_id: id,
+    checked_at: checkedAt,
+  };
+
+  if (existing.rows?.[0]?.$id) {
+    await appwriteServices.tables.updateRow({
+      databaseId: appwriteServices.databaseId,
+      tableId: appwriteServices.tableId,
+      rowId: existing.rows[0].$id,
+      data,
+      permissions: appwriteUserPermissions(state.user.$id),
+    });
+    return;
+  }
+
+  await appwriteServices.tables.createRow({
+    databaseId: appwriteServices.databaseId,
+    tableId: appwriteServices.tableId,
+    rowId: window.Appwrite.ID.unique(),
+    data,
+    permissions: appwriteUserPermissions(state.user.$id),
+  });
 }
 
 async function deleteCloudCheckin(id) {
-  if (!state.cloudReady || !supabaseClient) return;
-  const { error } = await supabaseClient
-    .from("checkins")
-    .delete()
-    .eq("brand_id", id);
-  if (error) throw error;
+  if (!state.cloudReady || !appwriteServices) return;
+  const data = await listCurrentUserCheckinRows([
+    window.Appwrite.Query.equal("brand_id", id),
+    window.Appwrite.Query.limit(10),
+  ]);
+
+  for (const row of data.rows || []) {
+    await appwriteServices.tables.deleteRow({
+      databaseId: appwriteServices.databaseId,
+      tableId: appwriteServices.tableId,
+      rowId: row.$id,
+    });
+  }
 }
 
 async function clearCloudCheckins() {
-  if (!state.cloudReady || !supabaseClient) return;
-  const { error } = await supabaseClient
-    .from("checkins")
-    .delete()
-    .neq("brand_id", -1);
-  if (error) throw error;
+  if (!state.cloudReady || !appwriteServices) return;
+  const data = await listCurrentUserCheckinRows([
+    window.Appwrite.Query.limit(5000),
+  ]);
+
+  for (const row of data.rows || []) {
+    await appwriteServices.tables.deleteRow({
+      databaseId: appwriteServices.databaseId,
+      tableId: appwriteServices.tableId,
+      rowId: row.$id,
+    });
+  }
 }
 
 function setSyncStatus(text, className) {
@@ -197,7 +288,7 @@ function handleCloudWriteError(error) {
   state.cloudReady = false;
   state.cloudError = error.message || String(error);
   setSyncStatus("云端写入失败，已保留本地", "error");
-  console.warn("Supabase write failed:", error);
+  console.warn("Appwrite write failed:", error);
 }
 
 function unique(values) {
@@ -496,15 +587,6 @@ document.querySelector("#exportBtn").addEventListener("click", exportCheckins);
 document.querySelector("#resetBtn").addEventListener("click", resetCheckins);
 els.authBtn.addEventListener("click", signInWithGitHub);
 els.signOutBtn.addEventListener("click", signOut);
-
-if (supabaseClient) {
-  supabaseClient.auth.onAuthStateChange((_event, session) => {
-    state.user = session?.user || null;
-    state.cloudReady = false;
-    renderAuthControls();
-    if (state.user) initCloudStorage();
-  });
-}
 
 getDeviceId();
 render();

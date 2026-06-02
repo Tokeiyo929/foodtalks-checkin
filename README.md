@@ -1,6 +1,6 @@
 # 食品品牌吃过打卡地图
 
-一个可以部署到 GitHub Pages 的静态打卡网站。品牌数据来自 FoodTalks 文章整理结果，打卡记录支持 Supabase 云端存储。
+一个可以部署到 GitHub Pages 的静态打卡网站。品牌数据来自 FoodTalks 文章整理结果，打卡记录支持 Appwrite 云端存储。
 
 ## 本地预览
 
@@ -11,21 +11,23 @@ python -m http.server 8766 --bind 127.0.0.1
 
 打开 `http://127.0.0.1:8766/`。
 
-## Supabase 设置
+## Appwrite 设置
 
-1. 新建 Supabase 项目。
-2. 在 Supabase SQL Editor 运行 `supabase-schema.sql`。
-3. 在 Authentication settings 开启 Anonymous Sign-ins。
-4. 复制 Project URL 和 anon public key，填入 `supabase-config.js`：
+1. 新建 Appwrite 项目。
+2. 在 Auth 中启用 GitHub OAuth 登录。
+3. 按 `appwrite-setup.md` 创建 TablesDB Database、`checkins` Table、Columns、Indexes 和权限。
+4. 复制 Endpoint、Project ID、Database ID 和 Table ID，填入 `appwrite-config.js`：
 
 ```js
-window.SUPABASE_CONFIG = {
-  url: "https://你的项目.supabase.co",
-  anonKey: "你的 anon public key",
+window.APPWRITE_CONFIG = {
+  endpoint: "https://cloud.appwrite.io/v1",
+  projectId: "你的 project id",
+  databaseId: "你的 database id",
+  tableId: "checkins",
 };
 ```
 
-没有填写 Supabase 配置时，网站会退回浏览器本地存储模式。
+没有填写 Appwrite 配置时，网站会退回浏览器本地存储模式。
 
 ## 部署到 GitHub Pages
 
