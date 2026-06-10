@@ -1,0 +1,27 @@
+[project]
+name = "foodtalks-checkin-tools"
+version = "0.1.0"
+description = "Offline photo brand detection pipeline for FoodTalks check-ins."
+requires-python = ">=3.12"
+dependencies = [
+  "pillow>=11.0.0",
+  "pillow-heif>=1.1.0",
+  "typer>=0.16.0",
+]
+
+[dependency-groups]
+dev = [
+  "basedpyright>=1.35.0",
+  "pytest>=8.0.0",
+  "ruff>=0.14.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.basedpyright]
+typeCheckingMode = "strict"
+reportAny = false
+reportCallInDefaultInitializer = false
+stubPath = "typings"

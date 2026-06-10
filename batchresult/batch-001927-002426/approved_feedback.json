@@ -1,0 +1,26 @@
+[
+  {
+    "index": 4,
+    "brand_id": 251,
+    "brand_name": "GODIVA歌帝梵",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0846(1).heic"
+  },
+  {
+    "index": 6,
+    "brand_id": 144,
+    "brand_name": "雀巢咖啡",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0850(2).heic"
+  },
+  {
+    "index": 9,
+    "brand_id": 348,
+    "brand_name": "蒙牛",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0857(2).heic"
+  },
+  {
+    "index": 17,
+    "brand_id": 204,
+    "brand_name": "a1",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0922(1).heic"
+  }
+]

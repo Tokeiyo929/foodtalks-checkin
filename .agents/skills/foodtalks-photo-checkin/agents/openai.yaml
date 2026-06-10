@@ -1,0 +1,4 @@
+interface:
+  display_name: "FoodTalks Photo Check-in"
+  short_description: "Private photo review to Appwrite."
+  default_prompt: "Use $foodtalks-photo-checkin to process FoodTalks photo batches with ODS review feedback and confirmed Appwrite check-ins."

@@ -1,0 +1,38 @@
+[
+  {
+    "index": 8,
+    "brand_id": 513,
+    "brand_name": "鲁花",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0238(1).heic"
+  },
+  {
+    "index": 10,
+    "brand_id": 62,
+    "brand_name": "王老吉",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0253(2).heic"
+  },
+  {
+    "index": 11,
+    "brand_id": 599,
+    "brand_name": "雪花啤酒",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0267(2).heic"
+  },
+  {
+    "index": 16,
+    "brand_id": 183,
+    "brand_name": "呀!土豆",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0363(1).heic"
+  },
+  {
+    "index": 22,
+    "brand_id": 45,
+    "brand_name": "维他奶",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0319(1).heic"
+  },
+  {
+    "index": 24,
+    "brand_id": 89,
+    "brand_name": "蜜雪冰城",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0330.heic"
+  }
+]

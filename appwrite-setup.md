@@ -6,9 +6,16 @@
 
 1. 在 Auth 的 OAuth2 providers 中启用 GitHub。
 2. 在 GitHub OAuth App 中添加回调地址：
-   `https://cloud.appwrite.io/v1/account/sessions/oauth2/callback/github/<PROJECT_ID>`
-3. 如果使用自托管 Appwrite，把回调地址里的 `https://cloud.appwrite.io/v1` 换成你的 Appwrite endpoint。
-4. 在项目平台设置中添加站点域名，例如本地预览的 `http://127.0.0.1:8766` 和 GitHub Pages 域名。
+   `https://fra.cloud.appwrite.io/v1/account/sessions/oauth2/callback/github/<PROJECT_ID>`
+3. 如果使用其他 Appwrite 区域或自托管 Appwrite，把回调地址里的 `https://fra.cloud.appwrite.io/v1` 换成 `appwrite-config.js` 中的 endpoint。
+4. 在项目的 Platforms 中添加 Web 平台：
+   - Name：任意，例如 `GitHub Pages`
+   - Hostname：`tokeiyo929.github.io`
+5. 本地预览需要再添加一个 Web 平台：
+   - Name：任意，例如 `Local preview`
+   - Hostname：`127.0.0.1`
+
+如果登录时报 `Invalid success param` 或 `Register your new client (tokeiyo929.github.io) as a new Web platform`，说明第 4 步还没有配置，或 Hostname 填成了完整 URL。Appwrite 的 Web 平台 Hostname 只填域名，不填 `https://`、路径或结尾斜杠。
 
 ## TablesDB
 

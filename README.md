@@ -15,12 +15,13 @@ python -m http.server 8766 --bind 127.0.0.1
 
 1. 新建 Appwrite 项目。
 2. 在 Auth 中启用 GitHub OAuth 登录。
-3. 按 `appwrite-setup.md` 创建 TablesDB Database、`checkins` Table、Columns、Indexes 和权限。
-4. 复制 Endpoint、Project ID、Database ID 和 Table ID，填入 `appwrite-config.js`：
+3. 在 Platforms 中添加 Web 平台，GitHub Pages 的 Hostname 填 `tokeiyo929.github.io`。
+4. 按 `appwrite-setup.md` 创建 TablesDB Database、`checkins` Table、Columns、Indexes 和权限。
+5. 复制 Endpoint、Project ID、Database ID 和 Table ID，填入 `appwrite-config.js`：
 
 ```js
 window.APPWRITE_CONFIG = {
-  endpoint: "https://cloud.appwrite.io/v1",
+  endpoint: "https://fra.cloud.appwrite.io/v1",
   projectId: "你的 project id",
   databaseId: "你的 database id",
   tableId: "checkins",

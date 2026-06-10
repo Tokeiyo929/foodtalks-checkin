@@ -1,0 +1,378 @@
+[
+  {
+    "brand_id": 436,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0059(1).heic",
+    "detected_text": "Blueglass",
+    "confidence": 0.99,
+    "evidence": "Visible on the cup logo and on the front of the container as 'Blueglass'.",
+    "matched_alias": "blueglassyogurt阿秋拉尕酸奶"
+  },
+  {
+    "brand_id": 436,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0060(1).heic",
+    "detected_text": "Blueglass",
+    "confidence": 0.99,
+    "evidence": "Visible on the cup label in large blue text, and repeated on the background boxes.",
+    "matched_alias": "blueglassyogurt阿秋拉尕酸奶"
+  },
+  {
+    "brand_id": 436,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0061(1).heic",
+    "detected_text": "Blueglass",
+    "confidence": 0.99,
+    "evidence": "Visible on the cup label as \"Blueglass\" and on the background sign as \"Blueglass\".",
+    "matched_alias": "blueglassyogurt阿秋拉尕酸奶"
+  },
+  {
+    "brand_id": 436,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0061(1).heic",
+    "detected_text": "BLUEGLASS YOGURT",
+    "confidence": 0.98,
+    "evidence": "Printed at the top of the cup label.",
+    "matched_alias": "blueglassyogurt阿秋拉尕酸奶"
+  },
+  {
+    "brand_id": 600,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0061.heic",
+    "detected_text": "欢乐堡",
+    "confidence": 0.95,
+    "evidence": "Printed on the bags above/near the English brand name.",
+    "matched_alias": "乐堡"
+  },
+  {
+    "brand_id": 436,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0062.heic",
+    "detected_text": "Blueglass",
+    "confidence": 0.98,
+    "evidence": "Small blue label near the top of the cup label reads \"Blueglass\" and \"BLUEGLASS YOGURT\".",
+    "matched_alias": "blueglassyogurt阿秋拉尕酸奶"
+  },
+  {
+    "brand_id": 436,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0062.heic",
+    "detected_text": "BLUEGLASS YOGURT",
+    "confidence": 0.97,
+    "evidence": "Top of the cup label clearly says \"BLUEGLASS YOGURT\".",
+    "matched_alias": "blueglassyogurt阿秋拉尕酸奶"
+  },
+  {
+    "brand_id": 600,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0063.heic",
+    "detected_text": "塔乐堡",
+    "confidence": 0.96,
+    "evidence": "Front label on the box",
+    "matched_alias": "乐堡"
+  },
+  {
+    "brand_id": 436,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0064(1).heic",
+    "detected_text": "BLUEGLASS",
+    "confidence": 0.99,
+    "evidence": "Multiple signs and labels on the wall, boxes, and chairs read 'BLUEGLASS'.",
+    "matched_alias": "blueglassyogurt阿秋拉尕酸奶"
+  },
+  {
+    "brand_id": 436,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0065(1).heic",
+    "detected_text": "BLUEGLASS YOGURT",
+    "confidence": 0.98,
+    "evidence": "Large wall sign centered above the counter clearly reads 'BLUEGLASS YOGURT'.",
+    "matched_alias": "blueglassyogurt阿秋拉尕酸奶"
+  },
+  {
+    "brand_id": 436,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0065(1).heic",
+    "detected_text": "BLUEGLASS",
+    "confidence": 0.85,
+    "evidence": "Several blue product boxes on the right counter have the word 'BLUEGLASS' printed on them.",
+    "matched_alias": "blueglassyogurt阿秋拉尕酸奶"
+  },
+  {
+    "brand_id": 600,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0065.heic",
+    "detected_text": "塔乐堡",
+    "confidence": 0.93,
+    "evidence": "Blue Chinese text near the bottom of the wrapper",
+    "matched_alias": "乐堡"
+  },
+  {
+    "brand_id": 433,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0067.heic",
+    "detected_text": "LV",
+    "confidence": 0.95,
+    "evidence": "The blue illuminated facade on the left shows the 'LV' monogram.",
+    "matched_alias": "velveeta"
+  },
+  {
+    "brand_id": 93,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0079.heic",
+    "detected_text": "古茗",
+    "confidence": 0.98,
+    "evidence": "White vertical Chinese text on the red cup",
+    "matched_alias": "古茗科技"
+  },
+  {
+    "brand_id": 122,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0084.heic",
+    "detected_text": "阿华田",
+    "confidence": 0.99,
+    "evidence": "Chinese brand name printed directly below \"Ovaltine\" on the package.",
+    "matched_alias": "阿华田"
+  },
+  {
+    "brand_id": 206,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0124(1).heic",
+    "detected_text": "COCO",
+    "confidence": 0.86,
+    "evidence": "White illuminated brand text on the front counter appears to read 'COCO'.",
+    "matched_alias": "migicoco"
+  },
+  {
+    "brand_id": 498,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0134(1).heic",
+    "detected_text": "厨邦",
+    "confidence": 0.98,
+    "evidence": "Top red logo on the package",
+    "matched_alias": "厨邦"
+  },
+  {
+    "brand_id": 410,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0143.heic",
+    "detected_text": "LURPAK",
+    "confidence": 0.99,
+    "evidence": "Visible repeatedly on the butter packs inside the tray.",
+    "matched_alias": "lurpak"
+  },
+  {
+    "brand_id": 93,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0145(1).heic",
+    "detected_text": "古茗",
+    "confidence": 0.98,
+    "evidence": "The same cup shows the Chinese brand name \"古茗\" next to the vertical \"goodme\" text.",
+    "matched_alias": "古茗科技"
+  },
+  {
+    "brand_id": 93,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0146(1).heic",
+    "detected_text": "古茗",
+    "confidence": 0.96,
+    "evidence": "Printed clearly on the cup lid above 'goodme'.",
+    "matched_alias": "古茗科技"
+  },
+  {
+    "brand_id": 716,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0148.heic",
+    "detected_text": "美好",
+    "confidence": 0.96,
+    "evidence": "Repeated red square logo on the center peach-colored packages and on the left maroon package.",
+    "matched_alias": "美好"
+  },
+  {
+    "brand_id": 299,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0152(1).heic",
+    "detected_text": "little freddie",
+    "confidence": 0.99,
+    "evidence": "Visible on the white-and-green box in the center and on the lower-right package.",
+    "matched_alias": "littlefreddi"
+  },
+  {
+    "brand_id": 299,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0153(1).heic",
+    "detected_text": "little freddie",
+    "confidence": 0.95,
+    "evidence": "Readable on the left boxed beverage packaging; brand text appears multiple times on the carton fronts.",
+    "matched_alias": "littlefreddi"
+  },
+  {
+    "brand_id": 102,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0182(1).heic",
+    "detected_text": "CHUANHAIFENGSHANG",
+    "confidence": 0.96,
+    "evidence": "English transliteration printed directly below the large Chinese brand name.",
+    "matched_alias": "if"
+  },
+  {
+    "brand_id": 547,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0183.heic",
+    "detected_text": "榨菜",
+    "confidence": 0.97,
+    "evidence": "Large Chinese text on the pickled vegetable packet at the lower left.",
+    "matched_alias": "涪陵榨菜"
+  },
+  {
+    "brand_id": 580,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0191(2).heic",
+    "detected_text": "KK",
+    "confidence": 0.87,
+    "evidence": "Middle-right illuminated storefront sign shows 'KK'.",
+    "matched_alias": "pukkaherbs"
+  },
+  {
+    "brand_id": 23,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0197(1).heic",
+    "detected_text": "百事可乐",
+    "confidence": 0.97,
+    "evidence": "Blue-lit refrigerator on the left shows Pepsi logo and the Chinese text 百事可乐.",
+    "matched_alias": "百事可乐"
+  },
+  {
+    "brand_id": 275,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0212.heic",
+    "detected_text": "绝味",
+    "confidence": 0.99,
+    "evidence": "Large storefront sign reads “绝味”.",
+    "matched_alias": "绝味食品"
+  },
+  {
+    "brand_id": 513,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0238(1).heic",
+    "detected_text": "鲁花",
+    "confidence": 0.99,
+    "evidence": "Red logo on the front of the cardboard box and repeated on the box sides.",
+    "matched_alias": "鲁花"
+  },
+  {
+    "brand_id": 694,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0241(1).heic",
+    "detected_text": "绝味水煮",
+    "confidence": 0.97,
+    "evidence": "Large red storefront sign in the center with white/yellow Chinese characters.",
+    "matched_alias": "绝味"
+  },
+  {
+    "brand_id": 332,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0253(2).heic",
+    "detected_text": "旺仔牛奶",
+    "confidence": 0.98,
+    "evidence": "Red can near the top center-right clearly shows the Chinese text \"旺仔牛奶\" with \"DRINK MILK\" underneath.",
+    "matched_alias": "旺仔"
+  },
+  {
+    "brand_id": 332,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0253(2).heic",
+    "detected_text": "旺仔",
+    "confidence": 0.9,
+    "evidence": "The same red can also shows the large brand text \"旺仔\" prominently.",
+    "matched_alias": "旺仔"
+  },
+  {
+    "brand_id": 599,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0253(2).heic",
+    "detected_text": "雪花",
+    "confidence": 0.87,
+    "evidence": "The large blue can on the left shows the Chinese text \"雪花\" near the top of the label.",
+    "matched_alias": "雪花啤酒"
+  },
+  {
+    "brand_id": 62,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0253(2).heic",
+    "detected_text": "王老吉",
+    "confidence": 0.96,
+    "evidence": "The red can at the upper right clearly displays the vertical yellow text \"王老吉\".",
+    "matched_alias": "王老吉"
+  },
+  {
+    "brand_id": 599,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0267(2).heic",
+    "detected_text": "雪花",
+    "confidence": 0.91,
+    "evidence": "Blue can on the right has the large white Chinese text '雪花' clearly visible.",
+    "matched_alias": "雪花啤酒"
+  },
+  {
+    "brand_id": 336,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0278(1).heic",
+    "detected_text": "Life",
+    "confidence": 0.88,
+    "evidence": "Printed in a black box near the lower right of the package label.",
+    "matched_alias": "fairlife"
+  },
+  {
+    "brand_id": 102,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0292.heic",
+    "detected_text": "GENIFIQUE",
+    "confidence": 0.92,
+    "evidence": "The same Lancome ad panel shows the product name \"GENIFIQUE\" below the bottle image.",
+    "matched_alias": "if"
+  },
+  {
+    "brand_id": 92,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0318(1).heic",
+    "detected_text": "茶百道",
+    "confidence": 0.83,
+    "evidence": "Red storefront sign on the left side shows the brand name '茶百道'.",
+    "matched_alias": "茶百道"
+  },
+  {
+    "brand_id": 102,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0328.heic",
+    "detected_text": "JIANGXI GIFTS",
+    "confidence": 0.95,
+    "evidence": "Right-side storefront sign has the English text 'JIANGXI GIFTS'.",
+    "matched_alias": "if"
+  },
+  {
+    "brand_id": 181,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0359(2).heic",
+    "detected_text": "乐事喜相逢",
+    "confidence": 0.88,
+    "evidence": "Red Chinese rooftop sign reads \"乐事喜相逢\".",
+    "matched_alias": "乐事"
+  },
+  {
+    "brand_id": 183,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0363(1).heic",
+    "detected_text": "呀！土豆",
+    "confidence": 0.99,
+    "evidence": "Large product name printed prominently across the top of the snack bag.",
+    "matched_alias": "呀!土豆"
+  },
+  {
+    "brand_id": 428,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0402.heic",
+    "detected_text": "Diamond",
+    "confidence": 0.96,
+    "evidence": "Visible on the side of the truck inside the red square logo.",
+    "matched_alias": "blackdiamond"
+  },
+  {
+    "brand_id": 62,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0425.heic",
+    "detected_text": "王老吉",
+    "confidence": 0.83,
+    "evidence": "Visible on the red-and-yellow beverage packaging stacked on the left side near the stairs.",
+    "matched_alias": "王老吉"
+  },
+  {
+    "brand_id": 27,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0458(1).heic",
+    "detected_text": "好望水",
+    "confidence": 0.99,
+    "evidence": "Visible on the main bottle labels near the top in orange-red oval logos.",
+    "matched_alias": "好望水"
+  },
+  {
+    "brand_id": 207,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0459(1).heic",
+    "detected_text": "趣多多",
+    "confidence": 0.98,
+    "evidence": "Large Chinese brand name printed prominently on the blue cookie package.",
+    "matched_alias": "趣多多"
+  },
+  {
+    "brand_id": 426,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0463(1).heic",
+    "detected_text": "光明",
+    "confidence": 0.99,
+    "evidence": "Red logo near the top of the yogurt lid reads \"光明\".",
+    "matched_alias": "小小光明"
+  },
+  {
+    "brand_id": 679,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0487(2).heic",
+    "detected_text": "海霸王",
+    "confidence": 0.99,
+    "evidence": "Package logo near the bottom center; also appears inside the round emblem.",
+    "matched_alias": "海霸王"
+  }
+]

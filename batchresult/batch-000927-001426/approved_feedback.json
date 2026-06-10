@@ -1,0 +1,38 @@
+[
+  {
+    "index": 3,
+    "brand_id": 27,
+    "brand_name": "好望水",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0458(1).heic"
+  },
+  {
+    "index": 4,
+    "brand_id": 207,
+    "brand_name": "趣多多",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0459(1).heic"
+  },
+  {
+    "index": 6,
+    "brand_id": 679,
+    "brand_name": "海霸王",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0487(2).heic"
+  },
+  {
+    "index": 11,
+    "brand_id": 194,
+    "brand_name": "桃李面包",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0460.heic"
+  },
+  {
+    "index": 14,
+    "brand_id": 193,
+    "brand_name": "达利园",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0495(1).heic"
+  },
+  {
+    "index": 15,
+    "brand_id": 193,
+    "brand_name": "达利园",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0497(1).heic"
+  }
+]

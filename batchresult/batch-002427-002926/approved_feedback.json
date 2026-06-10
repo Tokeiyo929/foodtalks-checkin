@@ -1,0 +1,20 @@
+[
+  {
+    "index": 15,
+    "brand_id": 132,
+    "brand_name": "皮爷咖啡",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_1169(1).heic"
+  },
+  {
+    "index": 20,
+    "brand_id": 255,
+    "brand_name": "蒙牛",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_1024(2).heic"
+  },
+  {
+    "index": 21,
+    "brand_id": 168,
+    "brand_name": "UCC悠诗诗",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_1037(1).heic"
+  }
+]

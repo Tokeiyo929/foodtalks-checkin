@@ -1,0 +1,9 @@
+phase: run-sync
+status: completed
+progress: 500/500 (100.0%)
+completed: 500
+skipped: 0
+failed: 0
+current: 
+message: Wrote 500 new response rows; 500 total rows.
+updated_at: 2026-06-09T11:02:30.048634+00:00

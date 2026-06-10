@@ -103,18 +103,42 @@ async function signInWithGitHub() {
     setSyncStatus("缺少 Appwrite 配置", "error");
     return;
   }
-  const redirectTo = window.location.origin + window.location.pathname;
   try {
+    const redirectTo = getOAuthRedirectUrl();
     await appwriteServices.account.createOAuth2Session({
       provider: window.Appwrite.OAuthProvider.Github,
       success: redirectTo,
       failure: redirectTo,
     });
   } catch (error) {
-    state.cloudError = error.message || String(error);
-    setSyncStatus("GitHub 登录不可用", "error");
+    state.cloudError = getErrorMessage(error);
+    setSyncStatus(getGitHubLoginErrorText(error), "error");
     console.warn("GitHub login failed:", error);
   }
+}
+
+function getOAuthRedirectUrl() {
+  const redirectUrl = new URL(window.location.href);
+  redirectUrl.search = "";
+  redirectUrl.hash = "";
+
+  if (!["http:", "https:"].includes(redirectUrl.protocol)) {
+    throw new Error("GitHub 登录需要通过 http 或 https 访问");
+  }
+
+  return redirectUrl.href;
+}
+
+function getGitHubLoginErrorText(error) {
+  const message = getErrorMessage(error);
+  if (message.includes("Register your new client") || message.includes("Invalid `success` param")) {
+    return "需在 Appwrite 添加当前站点平台";
+  }
+  return "GitHub 登录不可用";
+}
+
+function getErrorMessage(error) {
+  return error?.message || String(error);
 }
 
 async function signOut() {

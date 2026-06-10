@@ -1,0 +1,154 @@
+[
+  {
+    "brand_id": 547,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0181.heic",
+    "detected_text": "榨菜",
+    "confidence": 0.99,
+    "evidence": "Large prominent text on both left and right snack packages.",
+    "matched_alias": "涪陵榨菜"
+  },
+  {
+    "brand_id": 102,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0182(1).heic",
+    "detected_text": "CHUANHAIFENGSHANG",
+    "confidence": 0.98,
+    "evidence": "Romanized brand text printed under the large Chinese name in the center of the card.",
+    "matched_alias": "if"
+  },
+  {
+    "brand_id": 547,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0183.heic",
+    "detected_text": "榨菜",
+    "confidence": 0.99,
+    "evidence": "Large Chinese text on the small packet at lower left, indicating the packaged item.",
+    "matched_alias": "涪陵榨菜"
+  },
+  {
+    "brand_id": 23,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0197(1).heic",
+    "detected_text": "百事可乐",
+    "confidence": 0.98,
+    "evidence": "Blue illuminated refrigerator sign on the left clearly reads 百事可乐.",
+    "matched_alias": "百事可乐"
+  },
+  {
+    "brand_id": 534,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0202(1).heic",
+    "detected_text": "潮汕",
+    "confidence": 0.9,
+    "evidence": "Bottom row of circular signs includes the characters 潮 and 汕.",
+    "matched_alias": "潮汕集锦"
+  },
+  {
+    "brand_id": 534,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0205.heic",
+    "detected_text": "潮汕",
+    "confidence": 0.94,
+    "evidence": "Chinese text inside the red circle logo on the upper right side of the bag.",
+    "matched_alias": "潮汕集锦"
+  },
+  {
+    "brand_id": 275,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0212.heic",
+    "detected_text": "绝味",
+    "confidence": 0.84,
+    "evidence": "Large white characters on the main red sign; appears as part of the shop branding.",
+    "matched_alias": "绝味食品"
+  },
+  {
+    "brand_id": 513,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0238(1).heic",
+    "detected_text": "鲁花",
+    "confidence": 0.94,
+    "evidence": "Red logo on the front of the top box",
+    "matched_alias": "鲁花"
+  },
+  {
+    "brand_id": 694,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0241(1).heic",
+    "detected_text": "绝味水煮",
+    "confidence": 0.95,
+    "evidence": "Red storefront sign in the center clearly reads '绝味水煮'.",
+    "matched_alias": "绝味"
+  },
+  {
+    "brand_id": 599,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0253(2).heic",
+    "detected_text": "雪花",
+    "confidence": 0.97,
+    "evidence": "Blue can on the left shows the Chinese text \"雪花\".",
+    "matched_alias": "雪花啤酒"
+  },
+  {
+    "brand_id": 332,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0253(2).heic",
+    "detected_text": "旺仔牛奶",
+    "confidence": 0.96,
+    "evidence": "Small red can near the top center clearly shows \"旺仔牛奶\".",
+    "matched_alias": "旺仔"
+  },
+  {
+    "brand_id": 62,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0253(2).heic",
+    "detected_text": "王老吉",
+    "confidence": 0.98,
+    "evidence": "Red can near the top right clearly shows the vertical yellow text \"王老吉\".",
+    "matched_alias": "王老吉"
+  },
+  {
+    "brand_id": 599,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0267(2).heic",
+    "detected_text": "雪花",
+    "confidence": 0.96,
+    "evidence": "Blue can on the right shows the Chinese characters 雪花 near the top.",
+    "matched_alias": "雪花啤酒"
+  },
+  {
+    "brand_id": 174,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0278(1).heic",
+    "detected_text": "time",
+    "confidence": 0.91,
+    "evidence": "Small logo on the front label near the right side, beneath a cupcake icon.",
+    "matched_alias": "beamtimer治光师"
+  },
+  {
+    "brand_id": 336,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0278(1).heic",
+    "detected_text": "Life",
+    "confidence": 0.95,
+    "evidence": "Black logo panel at the lower right of the package front.",
+    "matched_alias": "fairlife"
+  },
+  {
+    "brand_id": 102,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0292.heic",
+    "detected_text": "GÉNIFIQUE",
+    "confidence": 0.86,
+    "evidence": "Visible beneath LANCOME on the same advertisement panel.",
+    "matched_alias": "if"
+  },
+  {
+    "brand_id": 102,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0328.heic",
+    "detected_text": "JIANGXI GIFTS",
+    "confidence": 0.95,
+    "evidence": "Right-side shop sign clearly reads 'JIANGXI GIFTS' under the Chinese text.",
+    "matched_alias": "if"
+  },
+  {
+    "brand_id": 181,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0359(2).heic",
+    "detected_text": "乐事喜相逢",
+    "confidence": 0.93,
+    "evidence": "Red rooftop Chinese sign on the building reads “乐事喜相逢”.",
+    "matched_alias": "乐事"
+  },
+  {
+    "brand_id": 183,
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_0363(1).heic",
+    "detected_text": "呀!土豆",
+    "confidence": 0.98,
+    "evidence": "Large main product name printed across the top of the snack bag.",
+    "matched_alias": "呀!土豆"
+  }
+]
