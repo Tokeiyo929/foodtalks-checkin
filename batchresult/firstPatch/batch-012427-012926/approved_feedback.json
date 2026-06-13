@@ -1,0 +1,44 @@
+[
+  {
+    "index": 1,
+    "brand_id": 231,
+    "brand_name": "彩虹糖",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_4770.heic"
+  },
+  {
+    "index": 5,
+    "brand_id": 382,
+    "brand_name": "伊利",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_4897(1).heic"
+  },
+  {
+    "index": 6,
+    "brand_id": 382,
+    "brand_name": "伊利",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_4902(2).heic"
+  },
+  {
+    "index": 9,
+    "brand_id": 338,
+    "brand_name": "安慕希",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_4935(3).heic"
+  },
+  {
+    "index": 10,
+    "brand_id": 654,
+    "brand_name": "乐力",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_4780(1).heic"
+  },
+  {
+    "index": 18,
+    "brand_id": 272,
+    "brand_name": "沃隆",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_4909(3).heic"
+  },
+  {
+    "index": 21,
+    "brand_id": 272,
+    "brand_name": "沃隆",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_4919.heic"
+  }
+]

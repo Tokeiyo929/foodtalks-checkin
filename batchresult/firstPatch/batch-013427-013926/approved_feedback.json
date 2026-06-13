@@ -1,0 +1,32 @@
+[
+  {
+    "index": 3,
+    "brand_id": 195,
+    "brand_name": "好丽友派",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_5190.heic"
+  },
+  {
+    "index": 4,
+    "brand_id": 444,
+    "brand_name": "日清",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_5206.heic"
+  },
+  {
+    "index": 5,
+    "brand_id": 338,
+    "brand_name": "安慕希",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_5211.heic"
+  },
+  {
+    "index": 8,
+    "brand_id": 23,
+    "brand_name": "百事可乐",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_5235.heic"
+  },
+  {
+    "index": 9,
+    "brand_id": 89,
+    "brand_name": "蜜雪冰城",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_5169.heic"
+  }
+]

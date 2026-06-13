@@ -1,0 +1,26 @@
+[
+  {
+    "index": 1,
+    "brand_id": 349,
+    "brand_name": "简爱",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_6405(2).heic"
+  },
+  {
+    "index": 2,
+    "brand_id": 349,
+    "brand_name": "简爱",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_6406(1).heic"
+  },
+  {
+    "index": 12,
+    "brand_id": 122,
+    "brand_name": "阿华田",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_6494(2).heic"
+  },
+  {
+    "index": 16,
+    "brand_id": 245,
+    "brand_name": "德芙",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_6508.heic"
+  }
+]

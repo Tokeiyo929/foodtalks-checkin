@@ -1,0 +1,392 @@
+[
+  {
+    "index": 1,
+    "brand_id": 338,
+    "brand_name": "安慕希",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7561.heic"
+  },
+  {
+    "index": 3,
+    "brand_id": 253,
+    "brand_name": "梦龙",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7571.heic"
+  },
+  {
+    "index": 5,
+    "brand_id": 261,
+    "brand_name": "八喜",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7574.heic"
+  },
+  {
+    "index": 7,
+    "brand_id": 444,
+    "brand_name": "合味道",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7576.heic"
+  },
+  {
+    "index": 8,
+    "brand_id": 474,
+    "brand_name": "莫小仙",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7578.heic"
+  },
+  {
+    "index": 9,
+    "brand_id": 184,
+    "brand_name": "益海嘉里",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7579.heic"
+  },
+  {
+    "index": 10,
+    "brand_id": 207,
+    "brand_name": "奥利奥",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7580(1).heic"
+  },
+  {
+    "index": 12,
+    "brand_id": 246,
+    "brand_name": "费列罗ferrero",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7582.heic"
+  },
+  {
+    "index": 13,
+    "brand_id": 184,
+    "brand_name": "益海嘉里家乐氏",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7584.heic"
+  },
+  {
+    "index": 16,
+    "brand_id": 246,
+    "brand_name": "费列罗ferrero",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7590.heic"
+  },
+  {
+    "index": 17,
+    "brand_id": 246,
+    "brand_name": "健达",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7591.heic"
+  },
+  {
+    "index": 18,
+    "brand_id": 245,
+    "brand_name": "m&m",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7594(1).heic"
+  },
+  {
+    "index": 19,
+    "brand_id": 251,
+    "brand_name": "godiva歌帝梵",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7595.heic"
+  },
+  {
+    "index": 20,
+    "brand_id": 245,
+    "brand_name": "士力架",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7596.heic"
+  },
+  {
+    "index": 21,
+    "brand_id": 235,
+    "brand_name": "贝欧宝biobor",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7597.heic"
+  },
+  {
+    "index": 22,
+    "brand_id": 231,
+    "brand_name": "绿箭",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7601(1).heic"
+  },
+  {
+    "index": 24,
+    "brand_id": 2,
+    "brand_name": "百岁山",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7607(1).heic"
+  },
+  {
+    "index": 25,
+    "brand_id": 116,
+    "brand_name": "红牛",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7612(1).heic"
+  },
+  {
+    "index": 27,
+    "brand_id": 27,
+    "brand_name": "好望水",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7614(1).heic"
+  },
+  {
+    "index": 28,
+    "brand_id": 67,
+    "brand_name": "东方树叶",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7617.heic"
+  },
+  {
+    "index": 30,
+    "brand_id": 235,
+    "brand_name": "阿麦斯amos",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7626.heic"
+  },
+  {
+    "index": 31,
+    "brand_id": 235,
+    "brand_name": "贝欧宝biobor",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7627.heic"
+  },
+  {
+    "index": 32,
+    "brand_id": 189,
+    "brand_name": "食验室",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7628.heic"
+  },
+  {
+    "index": 33,
+    "brand_id": 189,
+    "brand_name": "食验室",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7630.heic"
+  },
+  {
+    "index": 34,
+    "brand_id": 47,
+    "brand_name": "维维集团",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7634(1).heic"
+  },
+  {
+    "index": 35,
+    "brand_id": 351,
+    "brand_name": "初心",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7635(1).heic"
+  },
+  {
+    "index": 36,
+    "brand_id": 195,
+    "brand_name": "好丽友派",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7639.heic"
+  },
+  {
+    "index": 37,
+    "brand_id": 291,
+    "brand_name": "卫龙美味",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7640(1).heic"
+  },
+  {
+    "index": 38,
+    "brand_id": 285,
+    "brand_name": "无穷食品",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7642.heic"
+  },
+  {
+    "index": 39,
+    "brand_id": 233,
+    "brand_name": "大白兔",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7644.heic"
+  },
+  {
+    "index": 40,
+    "brand_id": 183,
+    "brand_name": "好多鱼",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7645(1).heic"
+  },
+  {
+    "index": 42,
+    "brand_id": 350,
+    "brand_name": "如实",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7657(2).heic"
+  },
+  {
+    "index": 43,
+    "brand_id": 351,
+    "brand_name": "活润",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7658(1).heic"
+  },
+  {
+    "index": 45,
+    "brand_id": 181,
+    "brand_name": "乐事",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7677(1).heic"
+  },
+  {
+    "index": 50,
+    "brand_id": 196,
+    "brand_name": "梅尼耶",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7688(1).heic"
+  },
+  {
+    "index": 51,
+    "brand_id": 215,
+    "brand_name": "danisa皇冠",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7690.heic"
+  },
+  {
+    "index": 52,
+    "brand_id": 215,
+    "brand_name": "danisa皇冠",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7691.heic"
+  },
+  {
+    "index": 53,
+    "brand_id": 251,
+    "brand_name": "godiva歌帝梵",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7692(2).heic"
+  },
+  {
+    "index": 54,
+    "brand_id": 299,
+    "brand_name": "littlefreddi",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7694(2).heic"
+  },
+  {
+    "index": 55,
+    "brand_id": 215,
+    "brand_name": "danisa皇冠",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7695(1).heic"
+  },
+  {
+    "index": 56,
+    "brand_id": 502,
+    "brand_name": "美和居",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7695(2).heic"
+  },
+  {
+    "index": 57,
+    "brand_id": 196,
+    "brand_name": "盼盼食品",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7697.heic"
+  },
+  {
+    "index": 58,
+    "brand_id": 196,
+    "brand_name": "梅尼耶",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7698(1).heic"
+  },
+  {
+    "index": 59,
+    "brand_id": 349,
+    "brand_name": "简爱",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7705(1).heic"
+  },
+  {
+    "index": 60,
+    "brand_id": 349,
+    "brand_name": "简爱",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7709(1).heic"
+  },
+  {
+    "index": 62,
+    "brand_id": 38,
+    "brand_name": "优酸乳",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7710.heic"
+  },
+  {
+    "index": 63,
+    "brand_id": 390,
+    "brand_name": "完达山",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7711(1).heic"
+  },
+  {
+    "index": 64,
+    "brand_id": 38,
+    "brand_name": "优酸乳",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7711.heic"
+  },
+  {
+    "index": 66,
+    "brand_id": 482,
+    "brand_name": "真心",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7715(1).heic"
+  },
+  {
+    "index": 69,
+    "brand_id": 236,
+    "brand_name": "阿尔卑斯",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7724.heic"
+  },
+  {
+    "index": 70,
+    "brand_id": 49,
+    "brand_name": "银鹭食品集团",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7731.heic"
+  },
+  {
+    "index": 73,
+    "brand_id": 477,
+    "brand_name": "好粥道等",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7752.heic"
+  },
+  {
+    "index": 74,
+    "brand_id": 122,
+    "brand_name": "阿华田",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7755.heic"
+  },
+  {
+    "index": 75,
+    "brand_id": 282,
+    "brand_name": "劲仔食品",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7758.heic"
+  },
+  {
+    "index": 78,
+    "brand_id": 292,
+    "brand_name": "翻天娃食品",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7761.heic"
+  },
+  {
+    "index": 79,
+    "brand_id": 292,
+    "brand_name": "翻天娃食品",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7777.heic"
+  },
+  {
+    "index": 91,
+    "brand_id": 68,
+    "brand_name": "三得利",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7616.heic"
+  },
+  {
+    "index": 100,
+    "brand_id": 464,
+    "brand_name": "南方黑芝麻",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7713.heic"
+  },
+  {
+    "index": 103,
+    "brand_id": 190,
+    "brand_name": "卧龙",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7720.heic"
+  },
+  {
+    "index": 105,
+    "brand_id": 271,
+    "brand_name": "洽洽",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7722.heic"
+  },
+  {
+    "index": 106,
+    "brand_id": 51,
+    "brand_name": "菲诺",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7727.heic"
+  },
+  {
+    "index": 109,
+    "brand_id": 187,
+    "brand_name": "上好佳",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7733.heic"
+  },
+  {
+    "index": 111,
+    "brand_id": 271,
+    "brand_name": "洽洽",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7757.heic"
+  },
+  {
+    "index": 115,
+    "brand_id": 262,
+    "brand_name": "好想你",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7772.heic"
+  },
+  {
+    "index": 116,
+    "brand_id": 271,
+    "brand_name": "洽洽",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_7773.heic"
+  }
+]

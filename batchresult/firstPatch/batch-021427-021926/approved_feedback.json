@@ -1,0 +1,236 @@
+[
+  {
+    "index": 1,
+    "brand_id": 291,
+    "brand_name": "卫龙美味",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8675(1).heic"
+  },
+  {
+    "index": 2,
+    "brand_id": 215,
+    "brand_name": "danisa皇冠",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8678(1).HEIC"
+  },
+  {
+    "index": 3,
+    "brand_id": 111,
+    "brand_name": "佳得乐",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8691(1).heic"
+  },
+  {
+    "index": 4,
+    "brand_id": 117,
+    "brand_name": "东鹏饮料",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8692(1).heic"
+  },
+  {
+    "index": 6,
+    "brand_id": 332,
+    "brand_name": "旺仔",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8694(1).heic"
+  },
+  {
+    "index": 7,
+    "brand_id": 339,
+    "brand_name": "纯甄",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8697(1).heic"
+  },
+  {
+    "index": 8,
+    "brand_id": 154,
+    "brand_name": "连咖啡",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8699.heic"
+  },
+  {
+    "index": 11,
+    "brand_id": 599,
+    "brand_name": "雪花啤酒",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8704.heic"
+  },
+  {
+    "index": 12,
+    "brand_id": 600,
+    "brand_name": "乌苏",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8706(1).heic"
+  },
+  {
+    "index": 16,
+    "brand_id": 347,
+    "brand_name": "畅轻",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8712(1).heic"
+  },
+  {
+    "index": 20,
+    "brand_id": 679,
+    "brand_name": "海霸王",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8745.heic"
+  },
+  {
+    "index": 21,
+    "brand_id": 499,
+    "brand_name": "千禾味业",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8746.heic"
+  },
+  {
+    "index": 22,
+    "brand_id": 49,
+    "brand_name": "银鹭食品集团",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8752(1).heic"
+  },
+  {
+    "index": 23,
+    "brand_id": 54,
+    "brand_name": "你好椰",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8754(1).heic"
+  },
+  {
+    "index": 24,
+    "brand_id": 64,
+    "brand_name": "和其正",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8755(1).heic"
+  },
+  {
+    "index": 26,
+    "brand_id": 620,
+    "brand_name": "杏花村",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8760(1).heic"
+  },
+  {
+    "index": 31,
+    "brand_id": 646,
+    "brand_name": "梅见",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8774(1).heic"
+  },
+  {
+    "index": 33,
+    "brand_id": 32,
+    "brand_name": "新奇士",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8781(1).heic"
+  },
+  {
+    "index": 35,
+    "brand_id": 215,
+    "brand_name": "danisa皇冠",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8785(1).heic"
+  },
+  {
+    "index": 36,
+    "brand_id": 444,
+    "brand_name": "出前一丁",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8787.heic"
+  },
+  {
+    "index": 37,
+    "brand_id": 144,
+    "brand_name": "雀巢咖啡",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8790(1).heic"
+  },
+  {
+    "index": 38,
+    "brand_id": 123,
+    "brand_name": "高乐高",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8794(1).heic"
+  },
+  {
+    "index": 39,
+    "brand_id": 693,
+    "brand_name": "肉敢当",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8795(1).heic"
+  },
+  {
+    "index": 41,
+    "brand_id": 709,
+    "brand_name": "张飞牛肉",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8797(1).heic"
+  },
+  {
+    "index": 42,
+    "brand_id": 508,
+    "brand_name": "中盐化工",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8799.heic"
+  },
+  {
+    "index": 43,
+    "brand_id": 545,
+    "brand_name": "加点滋味",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8800.heic"
+  },
+  {
+    "index": 44,
+    "brand_id": 99,
+    "brand_name": "nfc",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8802.heic"
+  },
+  {
+    "index": 45,
+    "brand_id": 360,
+    "brand_name": "和润",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8805(1).heic"
+  },
+  {
+    "index": 46,
+    "brand_id": 679,
+    "brand_name": "海霸王",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8806.heic"
+  },
+  {
+    "index": 47,
+    "brand_id": 444,
+    "brand_name": "合味道",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8816.heic"
+  },
+  {
+    "index": 50,
+    "brand_id": 37,
+    "brand_name": "优益c",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8824(2).heic"
+  },
+  {
+    "index": 52,
+    "brand_id": 351,
+    "brand_name": "初心",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8833(2).heic"
+  },
+  {
+    "index": 53,
+    "brand_id": 351,
+    "brand_name": "初心",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8834(2).heic"
+  },
+  {
+    "index": 54,
+    "brand_id": 509,
+    "brand_name": "雪天盐业",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8836(1).heic"
+  },
+  {
+    "index": 58,
+    "brand_id": 601,
+    "brand_name": "崂山啤酒",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8864(1).heic"
+  },
+  {
+    "index": 69,
+    "brand_id": 601,
+    "brand_name": "青岛啤酒",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8707(1).heic"
+  },
+  {
+    "index": 80,
+    "brand_id": 435,
+    "brand_name": "优鲜工坊",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8741(1).heic"
+  },
+  {
+    "index": 84,
+    "brand_id": 480,
+    "brand_name": "欢乐家",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8758(1).heic"
+  },
+  {
+    "index": 91,
+    "brand_id": 601,
+    "brand_name": "青岛啤酒",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_8779(1).heic"
+  }
+]

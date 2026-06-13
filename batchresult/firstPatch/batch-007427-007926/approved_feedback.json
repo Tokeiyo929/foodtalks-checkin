@@ -1,0 +1,20 @@
+[
+  {
+    "index": 4,
+    "brand_id": 23,
+    "brand_name": "百事可乐",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_2909.heic"
+  },
+  {
+    "index": 8,
+    "brand_id": 245,
+    "brand_name": "m&m",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_2949(2).heic"
+  },
+  {
+    "index": 30,
+    "brand_id": 130,
+    "brand_name": "lavazza拉瓦萨",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_2988(2).heic"
+  }
+]

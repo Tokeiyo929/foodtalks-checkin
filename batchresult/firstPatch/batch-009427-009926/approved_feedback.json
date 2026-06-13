@@ -1,0 +1,50 @@
+[
+  {
+    "index": 1,
+    "brand_id": 207,
+    "brand_name": "趣多多",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_3634.heic"
+  },
+  {
+    "index": 3,
+    "brand_id": 444,
+    "brand_name": "合味道",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_3659.heic"
+  },
+  {
+    "index": 4,
+    "brand_id": 681,
+    "brand_name": "千味央厨",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_3663(3).heic"
+  },
+  {
+    "index": 12,
+    "brand_id": 309,
+    "brand_name": "优加",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_3772.heic"
+  },
+  {
+    "index": 14,
+    "brand_id": 136,
+    "brand_name": "%arabica",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_3785.heic"
+  },
+  {
+    "index": 23,
+    "brand_id": 138,
+    "brand_name": "nowwa挪瓦咖啡",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_3638(2).heic"
+  },
+  {
+    "index": 25,
+    "brand_id": 462,
+    "brand_name": "欧扎克",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_3660(2).heic"
+  },
+  {
+    "index": 26,
+    "brand_id": 377,
+    "brand_name": "蒙牛",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_3662(1).heic"
+  }
+]

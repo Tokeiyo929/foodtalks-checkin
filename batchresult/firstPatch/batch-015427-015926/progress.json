@@ -1,0 +1,11 @@
+{
+  "phase": "run-sync",
+  "status": "completed",
+  "total": 500,
+  "completed": 500,
+  "skipped": 499,
+  "failed": 0,
+  "current_id": "",
+  "message": "Wrote 1 new response rows; 500 total rows.",
+  "updated_at": "2026-06-10T11:09:16.586541+00:00"
+}

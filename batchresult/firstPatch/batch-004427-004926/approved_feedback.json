@@ -1,0 +1,32 @@
+[
+  {
+    "index": 1,
+    "brand_id": 236,
+    "brand_name": "珍宝珠",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_1796.heic"
+  },
+  {
+    "index": 4,
+    "brand_id": 361,
+    "brand_name": "一鸣",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_1835.heic"
+  },
+  {
+    "index": 5,
+    "brand_id": 361,
+    "brand_name": "一鸣",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_1836.heic"
+  },
+  {
+    "index": 22,
+    "brand_id": 96,
+    "brand_name": "沪上阿姨",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_1864.heic"
+  },
+  {
+    "index": 23,
+    "brand_id": 278,
+    "brand_name": "煌上煌",
+    "photo_path": "C:\\Users\\addAdministrators\\Pictures\\photos\\相册\\IMG_1886.heic"
+  }
+]
