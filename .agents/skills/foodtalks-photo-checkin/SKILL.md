@@ -1,13 +1,13 @@
 ---
 name: foodtalks-photo-checkin
-description: Private FoodTalks photo brand check-in workflow. Use when processing local user photos to identify candidate FoodTalks brands, generate LibreOffice ODS review packs, read user feedback, copy confirmed source photos, and write confirmed brand IDs to Appwrite without keeping sensitive previews or blindly writing unreviewed matches.
+description: Private FoodTalks photo brand check-in workflow. Use when processing local user photos to identify only Appwrite-unchecked candidate FoodTalks brands, generate LibreOffice ODS review packs, read user feedback, copy confirmed source photos, and write confirmed brand IDs to Appwrite without keeping sensitive previews, including filtering out already checked-in Appwrite brand IDs before review packs and writes.
 ---
 
 # FoodTalks Photo Check-in
 
 Use this skill inside `E:\GitHub\foodtalks-checkin` for the local photo-to-Appwrite workflow. The user is privacy-sensitive: avoid exposing secrets, avoid uploading or copying full photo sets, and clean generated previews/request files after each batch.
 
-Current operating rule: run 500-photo batches, generate ODS-only review packs, write Appwrite only from user-confirmed feedback, and keep progress visible through `progress.txt`.
+Current operating rule: run 500-photo batches, query Appwrite first, generate ODS-only review packs only for candidate brands not already checked in Appwrite, write Appwrite only from user-confirmed feedback, and keep progress visible through `progress.txt`.
 
 ## Paths
 
@@ -32,6 +32,22 @@ Never place photo run artifacts on E drive. Do not move or delete source photos.
 - `tools.brand_photo_checkin.local_env` loads `.venv/foodtalks.env`; do not print secrets in chat, logs, or summaries.
 - Appwrite rows are idempotent by `user_id + brand_id`.
 
+## Appwrite Unchecked Gate
+
+Before starting or continuing any photo batch, load the current user's checked-in `brand_id` values from Appwrite using `APPWRITE_USER_ID` and `APPWRITE_API_KEY`. Treat this set as an exclusion list for the whole batch, and report only counts, not secrets.
+
+Never generate a review ODS that contains a candidate whose resolved `brand_id` is already checked in Appwrite for the target user. If the current code cannot filter review-pack rows by Appwrite checked IDs, add a small durable helper or a clearly named temporary script first; do not proceed with an unfiltered ODS.
+
+Filtering rules:
+
+- Query Appwrite for all rows where `user_id == APPWRITE_USER_ID`, with pagination if needed; collect checked `brand_id` values.
+- After `ingest`, filter `auto_write.json` / candidate rows against that set before generating `review_feedback.ods`.
+- If a visible candidate resolves to multiple `brand_id` values and any are already checked, remove the checked IDs and keep only unresolved/unchecked candidates that still need human review.
+- If all candidate `brand_id` values for a photo are already checked, omit that photo from the review pack.
+- Re-query Appwrite immediately before writing `approved_feedback.json`; skip any brand IDs that became checked after the ODS was generated.
+
+Do not infer Appwrite checked state from local batch folders, copied photos, ODS files, or prior logs. Appwrite is the source of truth.
+
 ## Batch Workflow
 
 Use 500-photo batches and C-drive run directories. When the user says "next batch" or "continue", find the latest `batch-<start>-<end>` directory under the C-drive run root and start at `<end> + 1`. Name the new directory with an inclusive end, for example offset `3927` becomes `batch-003927-004426`.
@@ -43,6 +59,8 @@ uv run python -m tools.brand_photo_checkin ingest "<run-dir>"
 ```
 
 Do not write Appwrite directly from `auto_write.json`. The user must review candidates first.
+
+After `ingest`, apply the Appwrite unchecked gate before `review_pack`. The review pack must be candidate-only and Appwrite-unchecked-only.
 
 `prepare` often exceeds the tool timeout while still finishing successfully. If it times out, check that `photos.jsonl`, `batch_requests.jsonl`, and exactly 500 files under `previews/` exist before rerunning.
 
@@ -74,6 +92,8 @@ Review pack contents:
 
 Do not ask the user to review non-candidate photos.
 
+Do not ask the user to review already checked-in Appwrite brands. If a generated ODS is later found to contain already checked-in brand IDs, treat it as invalid: stop, regenerate the review pack with the Appwrite unchecked filter, and tell the user to ignore the invalid ODS.
+
 The user wants ODS only for review. Do not keep CSV/XLSX review files unless needed temporarily by code; remove generated CSV/XLSX/intermediate reports after the review pack is safely created.
 
 ## ODS Feedback Semantics
@@ -85,10 +105,10 @@ The ODS table must use this simple schema:
 Interpretation:
 
 - `正确?` blank by default.
-- `正确? = ✓`: candidate brand is correct; write candidate brand.
+- `正确?` `TRUE`/`✓`/checked: candidate brand is correct; write candidate brand.
 - `正确?` blank: candidate is wrong or unconfirmed; skip; do not write or copy.
 
-Do not use the older `correct / wrong_brand / no_brand` dropdown unless reading an old review file. The code remains backward-compatible, but new review packs must use the single-check workflow.
+New review packs must leave `正确?` blank by default so LibreOffice does not display `FALSE`; the user can type `TRUE` or `✓` to confirm. The code remains backward-compatible with old boolean cells, old `✓` cells, and the older `correct / wrong_brand / no_brand` dropdown when reading old review files.
 
 If the user says an unmarked index is actually another brand, manually inspect that ODS row/contact sheet item and resolve the corrected brand. The current ODS schema has no dedicated correction column, so the correction may be in the chat message or typed into the `识别文字` column; do not rely only on `tools.brand_photo_checkin.feedback` to capture it.
 
@@ -116,6 +136,8 @@ Confirmed photos are copied under `matched-brands\brand-<id>-<label>\`. Only con
 ## Appwrite Write
 
 Write only rows from `approved_feedback.json`. Use Appwrite API key in memory/environment and verify afterward with a read query. Do not write unchecked rows.
+
+Before writing, re-query Appwrite checked `brand_id` values for the target user and remove any already checked IDs from `approved_feedback.json` or the write input. Do not rely only on the older review-time exclusion set.
 
 Required row fields:
 
@@ -174,4 +196,4 @@ uv run ruff check tools tests
 uv run pytest
 ```
 
-For review files, verify the ODS contains native validation for the `✓` marker and no old `wrong_brand/no_brand` options.
+For review files, verify the ODS leaves `正确?` blank by default, has no visible `FALSE`, has no `correct_marker` dropdown validation, and has no old `wrong_brand/no_brand` options.

@@ -101,6 +101,29 @@ class AppwriteClient:
         query = urllib.parse.urlencode([("queries[]", value) for value in queries])
         return self.send("GET", f"{self.rows_url()}?{query}", None)
 
+    def list_checked_brand_ids(self, user_id: str, page_size: int = 100) -> tuple[BrandId, ...]:
+        brand_ids: list[BrandId] = []
+        offset = 0
+        while True:
+            rows = self.list_checkins_page(user_id, page_size, offset)
+            if not rows:
+                break
+            brand_ids.extend(brand_id for brand_id in rows if brand_id not in brand_ids)
+            if len(rows) < page_size:
+                break
+            offset += page_size
+        return tuple(brand_ids)
+
+    def list_checkins_page(self, user_id: str, limit: int, offset: int) -> tuple[BrandId, ...]:
+        queries = [
+            query_equal("user_id", user_id),
+            query_limit(limit),
+            query_offset(offset),
+        ]
+        query = urllib.parse.urlencode([("queries[]", value) for value in queries])
+        response = self.send("GET", f"{self.rows_url()}?{query}", None)
+        return checked_brand_ids_from_response(response)
+
     def send(self, method: str, url: str, body: JsonValue | None) -> JsonValue:
         return self.transport.send(method, url, self.headers(), body)
 
@@ -126,6 +149,10 @@ def query_limit(value: int) -> str:
     return query_object("limit", None, [value])
 
 
+def query_offset(value: int) -> str:
+    return query_object("offset", None, [value])
+
+
 def query_object(method: str, field: str | None, values: list[JsonValue]) -> str:
     payload: dict[str, JsonValue] = {"method": method, "values": values}
     if field is not None:
@@ -139,3 +166,21 @@ def user_permissions(user_id: str) -> list[JsonValue]:
         f'update("user:{user_id}")',
         f'delete("user:{user_id}")',
     ]
+
+
+def checked_brand_ids_from_response(response: JsonValue) -> tuple[BrandId, ...]:
+    parsed: list[BrandId] = []
+    match response:
+        case {"rows": list(rows)}:
+            for row in rows:
+                match row:
+                    case {"brand_id": int(brand_id)}:
+                        parsed.append(BrandId(brand_id))
+                    case {"data": {"brand_id": int(brand_id)}}:
+                        parsed.append(BrandId(brand_id))
+                    case _:
+                        continue
+            return tuple(parsed)
+        case _:
+            msg = "Appwrite list response did not contain rows"
+            raise AppwriteError(msg)

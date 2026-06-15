@@ -18,6 +18,7 @@ NS = {
     "table": "urn:oasis:names:tc:opendocument:xmlns:table:1.0",
     "text": "urn:oasis:names:tc:opendocument:xmlns:text:1.0",
 }
+OFFICE_ATTR = "{urn:oasis:names:tc:opendocument:xmlns:office:1.0}"
 TABLE_ATTR = "{urn:oasis:names:tc:opendocument:xmlns:table:1.0}"
 
 app = typer.Typer(no_args_is_help=True)
@@ -80,10 +81,16 @@ def table_rows(table: ElementTree.Element) -> tuple[tuple[str, ...], ...]:
         values: list[str] = []
         for cell in row.findall("table:table-cell", NS):
             repeat = int(cell.attrib.get(f"{TABLE_ATTR}number-columns-repeated", "1"))
-            value = "".join(paragraph_text(paragraph) for paragraph in cell.findall("text:p", NS))
+            value = cell_text(cell)
             values.extend([value] * repeat)
         rows.append(tuple(values[:7]))
     return tuple(rows)
+
+
+def cell_text(cell: ElementTree.Element) -> str:
+    if cell.attrib.get(f"{OFFICE_ATTR}value-type") == "boolean":
+        return "true" if cell.attrib.get(f"{OFFICE_ATTR}boolean-value") == "true" else ""
+    return "".join(paragraph_text(paragraph) for paragraph in cell.findall("text:p", NS))
 
 
 def paragraph_text(paragraph: ElementTree.Element) -> str:

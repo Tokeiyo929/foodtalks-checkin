@@ -9,7 +9,7 @@ from pytest import MonkeyPatch
 import tools.brand_photo_checkin.__main__ as checkin_cli
 from tools.brand_photo_checkin.appwrite import AppwriteClient, query_equal, query_limit, user_permissions
 from tools.brand_photo_checkin.brands import find_candidates, match_visible_brands, normalize_text
-from tools.brand_photo_checkin.feedback import FeedbackRow, approve_feedback, parse_feedback_row
+from tools.brand_photo_checkin.feedback import FeedbackRow, approve_feedback, parse_feedback_row, read_feedback_ods
 from tools.brand_photo_checkin.local_env import load_local_env
 from tools.brand_photo_checkin.models import (
     AppwriteConfig,
@@ -278,10 +278,11 @@ def test_write_review_workbook_includes_dropdown_validations(tmp_path: Path) -> 
     assert "sqref=\"B2:B2\"" in sheet_xml
 
 
-def test_write_review_ods_includes_native_validations(tmp_path: Path) -> None:
+def test_write_review_ods_leaves_check_cells_blank_by_default(tmp_path: Path) -> None:
     image = tmp_path / "a.jpg"
     _ = image.write_bytes(b"x")
     output = tmp_path / "review_feedback.ods"
+    checked_output = tmp_path / "review_feedback_checked.ods"
     predictions = {image: Prediction(detected_text="奥利奥", matched_alias="奥利奥")}
 
     write_review_ods(output, (image,), predictions, ("奥利奥", "元气森林"))
@@ -291,11 +292,22 @@ def test_write_review_ods_includes_native_validations(tmp_path: Path) -> None:
     with zipfile.ZipFile(output) as archive:
         assert archive.read("mimetype").decode("utf-8") == ODS_MIMETYPE
         content_xml = archive.read("content.xml").decode("utf-8")
-    assert "table:content-validations" in content_xml
-    assert "correct_marker" in content_xml
-    assert "✓" in content_xml
+        entries = {name: archive.read(name) for name in archive.namelist()}
+    assert "table:content-validations" not in content_xml
+    assert "correct_marker" not in content_xml
+    assert "FALSE" not in content_xml
+    assert 'office:boolean-value="false"' not in content_xml
     assert "备注" not in content_xml
     assert "奥利奥" in content_xml
+    entries["content.xml"] = content_xml.replace(
+        '<table:table-cell table:style-name="check"><text:p></text:p></table:table-cell>',
+        '<table:table-cell office:value-type="string" table:style-name="check"><text:p>TRUE</text:p></table:table-cell>',
+        1,
+    ).encode("utf-8")
+    with zipfile.ZipFile(checked_output, "w") as archive:
+        for name, content in entries.items():
+            archive.writestr(name, content)
+    assert read_feedback_ods(checked_output)[0].correct_marker == "TRUE"
 
 
 def test_approve_feedback_when_checked_uses_candidate_brand(tmp_path: Path) -> None:
